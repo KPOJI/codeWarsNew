@@ -24,7 +24,7 @@ pigIt('hello world !') */
 //firstNonRepeatingLetter
 
 
-let a = 'sTreSS'
+/* let a = 'sTreSS'
 
 function firstNonRepeatingLetter(s) {
 
@@ -35,4 +35,83 @@ function firstNonRepeatingLetter(s) {
 	return s[index]||''
 	
 	}
-firstNonRepeatingLetter(a)
+firstNonRepeatingLetter(a) */
+
+//Roman Numerals Helper
+let a = 5
+let obj = {
+I : 1,
+II : 2,
+III : 3,
+IV : 4,
+V : 5,
+VI : 6,
+VII : 7,
+VIII : 8,
+IX : 9,
+X : 10,
+XX : 20,
+XXX : 30,
+XL : 40,
+L : 50,
+LX : 60,
+LXX : 70,
+LXXX : 80,
+XC : 90,
+C : 100,
+CC : 200,
+CCC : 300,
+CD : 400,
+D : 500,
+DC : 600,
+DCC : 700,
+DCCC : 800,
+CM : 900,
+M : 1000,
+MM : 2000,
+MMM : 3000}
+
+// TODO: create a RomanNumerals helper object
+
+let RomanNumerals = {
+	toRoman(num){
+				let first = num%10
+				num = num-first
+				let second = (num/10)%10*10
+				num = num-second
+				let third = (num/100)%10*100
+				num = (num-third)
+				let fourth = num
+				console.log(fourth,third,second,first)
+				let arr = []
+				for (let k in obj) {
+					first === obj[k]? arr.push(k) : k;
+					second === obj[k]? arr.push(k) : k;
+					third === obj[k]? arr.push(k) : k;
+					fourth === obj[k]? arr.push(k) : k;
+				}
+				return arr.reverse().join('')
+				},
+
+	fromRoman(romanNum){
+						let result = 0
+						let arrr = [...romanNum]
+						arrr.forEach((v,i,a)=>
+						{	for (let k in obj) 
+							{	if (v === k && obj[a[i]]<obj[a[i+1]] )
+									{result = result - obj[k]}
+								if (v === k && (obj[a[i]]>=obj[a[i+1]] || a[i+1]===undefined))
+									{result = result + obj[k]}
+							}
+						})
+						return result
+						}
+					}
+
+
+
+
+
+console.log(RomanNumerals.toRoman(2008))
+console.log(RomanNumerals.fromRoman('XVIII'))
+
