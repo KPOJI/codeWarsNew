@@ -1,4 +1,4 @@
-//Simple Pig Latin
+//5 kyu Simple Pig Latin
 
 /* function pigIt(str){
 	let strArr = str.split(' ')
@@ -21,7 +21,7 @@ pigIt('hello world !') */
 
 
 
-//firstNonRepeatingLetter
+//5 kyu firstNonRepeatingLetter
 
 
 /* let a = 'sTreSS'
@@ -37,8 +37,8 @@ function firstNonRepeatingLetter(s) {
 	}
 firstNonRepeatingLetter(a) */
 
-//Roman Numerals Helper
-let a = 5
+//4 kyu    Roman Numerals Helper
+/* let a = 5
 let obj = {
 I : 1,
 II : 2,
@@ -113,5 +113,13 @@ let RomanNumerals = {
 
 
 console.log(RomanNumerals.toRoman(2008))
-console.log(RomanNumerals.fromRoman('XVIII'))
+console.log(RomanNumerals.fromRoman('XVIII')) */
+
+
+//6 kyu Multiples of 3 or 5
+function solution(number){
+	let result = 0;
+	for (let i = 1 ; i<number; i++) {(i%3===0||i%5===0)? result+=i:i}
+	return result
+  }
 
