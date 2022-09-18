@@ -117,9 +117,21 @@ console.log(RomanNumerals.fromRoman('XVIII')) */
 
 
 //6 kyu Multiples of 3 or 5
-function solution(number){
+/* function solution(number){
 	let result = 0;
 	for (let i = 1 ; i<number; i++) {(i%3===0||i%5===0)? result+=i:i}
 	return result
-  }
+  } */
 
+
+
+  // unique
+/* function isUnique(string) {
+	console.log([...string].sort())
+	return ![...string].sort().some((v,i,a)=>v===a[i+1])
+}
+//!!!!!!!!!!!! return new Set(string) === string.length --- set - уникальные символы
+console.log(isUnique('abcdef'))
+console.log(isUnique('1234567'))
+console.log(isUnique('abcABC'))
+console.log(isUnique('abcadef')) */
